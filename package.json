@@ -4,6 +4,10 @@
   "description": "A Vue.js project",
   "author": "zhaoguojun <zhaoguojun@gosuncn.com>",
   "private": true,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kkxiaojun/vue-admin-system.git"
+  },
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
