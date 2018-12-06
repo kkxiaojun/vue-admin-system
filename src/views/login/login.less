@@ -1,0 +1,312 @@
+.public-wh {
+    width: 100%;
+    height: 100%;
+}
+
+.login-wrap {
+    .public-wh;
+    position: relative;
+    min-width: 1200px;
+    min-height: 600px;
+    overflow: auto;
+    .login-bg {
+        .public-wh;
+        position: absolute;
+        z-index: 0;
+        img {
+            .public-wh;
+        }
+    }
+    .login-container {
+        .public-wh;
+        position: relative;
+        z-index: 1;
+        .content {
+            width: 1000px;
+            height: 560px;
+            position: absolute;
+            left: 50%;
+            margin-left: -500px;
+            top: 50%;
+            margin-top: -280px;
+            text-align: center;
+            .header {
+                width: 1000px;
+                height: 60px;
+                .title {
+                    display: inline-block;
+                    font-size: 50px;
+                    color: #fff;
+                    font-weight: 700;
+                    letter-spacing: 5px;
+                    text-align: center;
+                    padding-left: 70px;
+                }
+                .logo {
+                    display: inline-block;
+                    position: absolute;
+                    left: 235px;
+                    top: -5px;
+                    img {
+                        width: 57px;
+                        height: 60px;
+                    }
+                    .sec-title {
+                        color: #fff;
+                        position: relative;
+                        top: 3px;
+                    }
+                }
+            }
+            .body {
+                width: 890px;
+                height: 380px;
+                margin: 0 auto;
+                position: relative;
+                margin-top: 50px;
+                .body-bg {
+                    .public-wh;
+                    z-index: 2;
+                    position: absolute;
+                    img {
+                        .public-wh;
+                    }
+                }
+                .login-type-select {
+                    width: 200px;
+                    height: 360px;
+                    display: inline-block;
+                    position: relative;
+                    .password-active {
+                        cursor: pointer;
+                        width: 119px;
+                        height: 119px;
+                        margin-left: 60px;
+                        background: url(../../images/home/password.png) no-repeat;
+                    }
+                    .password {
+                        cursor: pointer;
+                        width: 119px;
+                        height: 119px;
+                        margin-left: 60px;
+                        background: url(../../images/home/password_hover.png) no-repeat;
+                    }
+                    .face-active {
+                        cursor: pointer;
+                        width: 119px;
+                        height: 119px;
+                        background: url(../../images/home/face.png) no-repeat;
+                    }
+                    .face {
+                        cursor: pointer;
+                        width: 119px;
+                        height: 119px;
+                        background: url(../../images/home/face_hover.png) no-repeat;
+                    }
+                    .defi-active {
+                        cursor: pointer;
+                        width: 119px;
+                        height: 119px;
+                        margin-left: 50px;
+                        background: url(../../images/home/defi.png) no-repeat;
+                    }
+                    .defi {
+                        cursor: pointer;
+                        width: 119px;
+                        height: 119px;
+                        margin-left: 50px;
+                        background: url(../../images/home/defi_hover.png) no-repeat;
+                    }
+                }
+                .form {
+                    z-index: 3;
+                    position: relative;
+                    width: 533px;
+                    height: 212px;
+                    display: inline-block;
+                    top: -160px;
+                    left: 10px;
+                    padding: 1px;
+                    box-sizing: border-box; //background: url(../../images/home/circle.png) no-repeat;
+                    .formbg {
+                        position: relative;
+                        width: 80%;
+                        z-index: -1;
+                    }
+                    .tip {
+                        color: #f33d3d;
+                        height: 20px;
+                        line-height: 20px;
+                        position: absolute;
+                        top: 180px;
+                        left: 175px;
+                    }
+                    .title {
+                        width: 100%;
+                        color: #12E5FF;
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: 700;
+                        margin-top: 30px;
+                        letter-spacing: 6px;
+                        margin-bottom: 15px;
+                    }
+                    .user {
+                        width: 220px !important;
+                        display: inline-block !important;
+                        font-size: 20px;
+                        height: 30px;
+                        line-height: 40px;
+                        background: #001f59;
+                        border: none;
+                        .public-wh;
+                        color: #00ffff;
+                    }
+                    .user-icon {
+                        background: url(../../images/home/user_icon.png) no-repeat;
+                        width: 20px;
+                        height: 24px;
+                        display: inline-block;
+                        position: relative;
+                        top: 5px;
+                        margin: 0 5px;
+                    }
+                    .passwork-icon {
+                        background: url(../../images/home/password_icon.png) no-repeat;
+                        width: 20px;
+                        height: 24px;
+                        display: inline-block;
+                        position: relative;
+                        top: 5px;
+                        margin: 0 5px;
+                    }
+                    .password {
+                        width: 220px !important;
+                        display: inline-block !important;
+                        font-size: 20px;
+                        height: 30px;
+                        line-height: 40px;
+                        background: #00276a;
+                        border: none;
+                        .public-wh;
+                        color: #00ffff;
+                    }
+                    .user-wrap {
+                        // background: url(../../images/login/user_input_bg.png);;
+                        position: absolute;
+                        box-sizing: border-box;
+                        height: 50px;
+                        padding: 5px;
+                        top: 30px;
+                        left: 30px;
+                        border-bottom: 1px solid #12E7FE;
+                    }
+                    .password-wrap {
+                        // background: url(../../images/login/pass_input_bg.png);
+                        display: inline-block;
+                        position: absolute;
+                        box-sizing: border-box;
+                        height: 50px;
+                        padding: 5px;
+                        top: 95px;
+                        left: 30px;
+                        border-bottom: 1px solid #12E7FE;
+                    }
+                    /*input{
+                        display: block;
+                        .public-wh;
+                        border:none;
+                        background: #022459;
+                        color:#12E5FF;
+                    }*/
+                    .submit {
+                        width: 90px;
+                        margin: 0 auto;
+                        background: #1089DC;
+                        height: 60px;
+                        line-height: 60px;
+                        border-radius: 3px;
+                        text-align: center;
+                        display: inline-block;
+                        cursor: pointer;
+                        color: #fff;
+                        font-size: 20px;
+                        font-weight: 400;
+                        position: relative;
+                        top: 32px;
+                        right: 125px;
+                    }
+                    .certificate-login {
+                        top: 4px;
+                        left: -270px;
+                    }
+                    .pass {
+                        width: 290px;
+                        color: #fff;
+                        position: absolute;
+                        top: 130px;
+                        font-size: 15px;
+                        left: 41px;
+                        text-align: left;
+                        input {
+                            width: 18px;
+                            height: 18px;
+                            position: relative;
+                            top: 3px;
+                            background: transparent;
+                        }
+                        .forget {
+                            margin-left: 107px
+                        }
+                    }
+                    .login-type {
+                        width: 200px;
+                        margin: 0 auto;
+                        margin-top: 10px;
+                        .face {
+                            cursor: pointer;
+                            width: 70px;
+                            float: left;
+                            height: 85px;
+                            .face-img {
+                                width: 69px;
+                                height: 69px;
+                                background: url(../../images/login/face_login.png);
+                                &:active,
+                                &:hover {
+                                    background: url(../../images/login/face_login_active.png);
+                                }
+                            }
+                        }
+                        .certificate {
+                            width: 90px;
+                            float: right;
+                            height: 85px;
+                            cursor: pointer;
+                            .certificate-img {
+                                width: 69px;
+                                height: 69px;
+                                margin: 0 auto;
+                                background: url(../../images/login/certificate_login.png);
+                                &:active,
+                                &:hover {
+                                    background: url(../../images/login/certificate_login_active.png);
+                                }
+                            }
+                        }
+                        .login-type-name {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        .footer {
+            color: #fff;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            margin-left: -180px;
+        }
+    }
+}

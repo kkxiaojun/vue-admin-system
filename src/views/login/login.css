@@ -1,0 +1,317 @@
+.public-wh {
+  width: 100%;
+  height: 100%;
+}
+.login-wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  min-width: 1200px;
+  min-height: 600px;
+  overflow: auto;
+}
+.login-wrap .login-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.login-wrap .login-bg img {
+  width: 100%;
+  height: 100%;
+}
+.login-wrap .login-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.login-wrap .login-container .content {
+  width: 1000px;
+  height: 560px;
+  position: absolute;
+  left: 50%;
+  margin-left: -500px;
+  top: 50%;
+  margin-top: -280px;
+  text-align: center;
+}
+.login-wrap .login-container .content .header {
+  width: 1000px;
+  height: 60px;
+}
+.login-wrap .login-container .content .header .title {
+  display: inline-block;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-align: center;
+  padding-left: 70px;
+}
+.login-wrap .login-container .content .header .logo {
+  display: inline-block;
+  position: absolute;
+  left: 235px;
+  top: -5px;
+}
+.login-wrap .login-container .content .header .logo img {
+  width: 57px;
+  height: 60px;
+}
+.login-wrap .login-container .content .header .logo .sec-title {
+  color: #fff;
+  position: relative;
+  top: 3px;
+}
+.login-wrap .login-container .content .body {
+  width: 890px;
+  height: 380px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 50px;
+}
+.login-wrap .login-container .content .body .body-bg {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: absolute;
+}
+.login-wrap .login-container .content .body .body-bg img {
+  width: 100%;
+  height: 100%;
+}
+.login-wrap .login-container .content .body .login-type-select {
+  width: 200px;
+  height: 360px;
+  display: inline-block;
+  position: relative;
+}
+.login-wrap .login-container .content .body .login-type-select .password-active {
+  cursor: pointer;
+  width: 119px;
+  height: 119px;
+  margin-left: 60px;
+  background: url(../../images/home/password.png) no-repeat;
+}
+.login-wrap .login-container .content .body .login-type-select .password {
+  cursor: pointer;
+  width: 119px;
+  height: 119px;
+  margin-left: 60px;
+  background: url(../../images/home/password_hover.png) no-repeat;
+}
+.login-wrap .login-container .content .body .login-type-select .face-active {
+  cursor: pointer;
+  width: 119px;
+  height: 119px;
+  background: url(../../images/home/face.png) no-repeat;
+}
+.login-wrap .login-container .content .body .login-type-select .face {
+  cursor: pointer;
+  width: 119px;
+  height: 119px;
+  background: url(../../images/home/face_hover.png) no-repeat;
+}
+.login-wrap .login-container .content .body .login-type-select .defi-active {
+  cursor: pointer;
+  width: 119px;
+  height: 119px;
+  margin-left: 50px;
+  background: url(../../images/home/defi.png) no-repeat;
+}
+.login-wrap .login-container .content .body .login-type-select .defi {
+  cursor: pointer;
+  width: 119px;
+  height: 119px;
+  margin-left: 50px;
+  background: url(../../images/home/defi_hover.png) no-repeat;
+}
+.login-wrap .login-container .content .body .form {
+  z-index: 3;
+  position: relative;
+  width: 533px;
+  height: 212px;
+  display: inline-block;
+  top: -160px;
+  left: 10px;
+  padding: 1px;
+  box-sizing: border-box;
+  /*input{
+                        display: block;
+                        .public-wh;
+                        border:none;
+                        background: #022459;
+                        color:#12E5FF;
+                    }*/
+}
+.login-wrap .login-container .content .body .form .formbg {
+  position: relative;
+  width: 80%;
+  z-index: -1;
+}
+.login-wrap .login-container .content .body .form .tip {
+  color: #f33d3d;
+  height: 20px;
+  line-height: 20px;
+  position: absolute;
+  top: 180px;
+  left: 175px;
+}
+.login-wrap .login-container .content .body .form .title {
+  width: 100%;
+  color: #12E5FF;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 30px;
+  letter-spacing: 6px;
+  margin-bottom: 15px;
+}
+.login-wrap .login-container .content .body .form .user {
+  width: 220px !important;
+  display: inline-block !important;
+  font-size: 20px;
+  height: 30px;
+  line-height: 40px;
+  background: #001f59;
+  border: none;
+  width: 100%;
+  height: 100%;
+  color: #00ffff;
+}
+.login-wrap .login-container .content .body .form .user-icon {
+  background: url(../../images/home/user_icon.png) no-repeat;
+  width: 20px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin: 0 5px;
+}
+.login-wrap .login-container .content .body .form .passwork-icon {
+  background: url(../../images/home/password_icon.png) no-repeat;
+  width: 20px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin: 0 5px;
+}
+.login-wrap .login-container .content .body .form .password {
+  width: 220px !important;
+  display: inline-block !important;
+  font-size: 20px;
+  height: 30px;
+  line-height: 40px;
+  background: #00276a;
+  border: none;
+  width: 100%;
+  height: 100%;
+  color: #00ffff;
+}
+.login-wrap .login-container .content .body .form .user-wrap {
+  position: absolute;
+  box-sizing: border-box;
+  height: 50px;
+  padding: 5px;
+  top: 30px;
+  left: 30px;
+  border-bottom: 1px solid #12E7FE;
+}
+.login-wrap .login-container .content .body .form .password-wrap {
+  display: inline-block;
+  position: absolute;
+  box-sizing: border-box;
+  height: 50px;
+  padding: 5px;
+  top: 95px;
+  left: 30px;
+  border-bottom: 1px solid #12E7FE;
+}
+.login-wrap .login-container .content .body .form .submit {
+  width: 90px;
+  margin: 0 auto;
+  background: #1089DC;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 3px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+  top: 32px;
+  right: 125px;
+}
+.login-wrap .login-container .content .body .form .certificate-login {
+  top: 4px;
+  left: -270px;
+}
+.login-wrap .login-container .content .body .form .pass {
+  width: 290px;
+  color: #fff;
+  position: absolute;
+  top: 130px;
+  font-size: 15px;
+  left: 41px;
+  text-align: left;
+}
+.login-wrap .login-container .content .body .form .pass input {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: 3px;
+  background: transparent;
+}
+.login-wrap .login-container .content .body .form .pass .forget {
+  margin-left: 107px;
+}
+.login-wrap .login-container .content .body .form .login-type {
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.login-wrap .login-container .content .body .form .login-type .face {
+  cursor: pointer;
+  width: 70px;
+  float: left;
+  height: 85px;
+}
+.login-wrap .login-container .content .body .form .login-type .face .face-img {
+  width: 69px;
+  height: 69px;
+  background: url(../../images/login/face_login.png);
+}
+.login-wrap .login-container .content .body .form .login-type .face .face-img:active,
+.login-wrap .login-container .content .body .form .login-type .face .face-img:hover {
+  background: url(../../images/login/face_login_active.png);
+}
+.login-wrap .login-container .content .body .form .login-type .certificate {
+  width: 90px;
+  float: right;
+  height: 85px;
+  cursor: pointer;
+}
+.login-wrap .login-container .content .body .form .login-type .certificate .certificate-img {
+  width: 69px;
+  height: 69px;
+  margin: 0 auto;
+  background: url(../../images/login/certificate_login.png);
+}
+.login-wrap .login-container .content .body .form .login-type .certificate .certificate-img:active,
+.login-wrap .login-container .content .body .form .login-type .certificate .certificate-img:hover {
+  background: url(../../images/login/certificate_login_active.png);
+}
+.login-wrap .login-container .content .body .form .login-type .login-type-name {
+  color: #fff;
+}
+.login-wrap .login-container .footer {
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -180px;
+}

@@ -21,7 +21,6 @@
         </el-form>
       </el-col>
     </el-row>
-    <div>{{filterText | filterHtml}}</div>
   </el-card>
 </template>
 
@@ -99,10 +98,7 @@
     }
   }
 </script>
-<style scoped>
-.el-col-s{
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+<style lang="less" scoped>
+@import '~views/login/login';
 </style>
+
