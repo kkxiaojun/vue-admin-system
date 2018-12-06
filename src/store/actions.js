@@ -12,12 +12,8 @@ const actions = {
   userLogin({
     commit
   }, data) {
+    console.log('userLogin:', data)
     commit(types.LOGIN, data);
-  },
-  delUserSession({
-    commit
-  }, data) {
-    commit(types.DELSESSION, data);
   },
   userLoginOut({
     commit

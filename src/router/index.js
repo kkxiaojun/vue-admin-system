@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import { getCookie } from 'common/js/storeUtil'
 const Home = () => import('views/home/home')
 const Login = () => import('views/login/login')
 
@@ -14,6 +15,11 @@ const router = new Router({
       component: Login
     },
     {
+      path: '/login',
+      name: 'login',
+      component: Login
+    },
+    {
       path: '/home',
       name: 'home',
       component: Home
@@ -21,11 +27,11 @@ const router = new Router({
   ]
 })
 router.beforeEach((to, from, next) => {
-  if (to) {
-    console.log('to', to)
+  console.log('getCookie', getCookie('user'))
+  if (getCookie('user') || to.path === '/') {
     next()
   } else {
-    console.log('from:', from)
+    next({ name: 'login'})
   }
 })
 export default router

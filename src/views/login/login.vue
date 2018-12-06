@@ -2,7 +2,7 @@
   <el-card class="box-card">
     <el-row type="flex" justify="center">
       <el-col :span="8" class="el-col-s">
-        <el-form 
+        <el-form
           label-position="left" 
           label-width="80px" 
           :model="formLogin"
@@ -13,14 +13,10 @@
             <el-input v-model="formLogin.name"></el-input>
           </el-form-item>
           <el-form-item label="密码" prop="password">
-            <el-input v-model="formLogin.password"></el-input>
-          </el-form-item>
-          <el-form-item label="确认密码" prop="checkPassword">
-            <el-input v-model="formLogin.checkPassword"></el-input>
+            <el-input v-model="formLogin.password" @keyup.enter.native="login"></el-input>
           </el-form-item>
           <el-form-item>
               <el-button type="primary" @click="login">登录</el-button>
-              <el-button @click="resetForm">取消</el-button>
           </el-form-item>
           <el-form-item>
             <router-link to="/register">
@@ -36,8 +32,8 @@
 <script type="text/javascript">
   // 引入vuex /src/helper.js中的辅助函数，
   // 将actions中的方法直接转为组件中的方法
-  import {mapActions} from 'vuex';
-  import { detail } from 'service/getData';
+  import { mapActions } from 'vuex';
+  import { getLogin } from 'service/getData';
   import md5 from 'js-md5';
   export default {
     data(){
@@ -56,20 +52,10 @@
           cb();
          }
       }
-      let checkPasswordAgain = (rule,value,cb)=>{
-        if(!value){
-          return cb(new Error('再次输入密码不能为空!'))
-         }else if(value !== this.formLogin.password){
-          return cb(new Error('两次输入密码不一致!'));
-         }else{
-          cb();
-         }
-      }
       return{
         formLogin:{
           name: '',
-          password: '',
-          checkPassword: ''
+          password: ''
         },
         rules:{
           name:[
@@ -77,9 +63,6 @@
           ],
           password:[
             {validator:checkPassword,trigger: 'blur'}
-          ],
-          checkPassword:[
-            {validator:checkPasswordAgain,trigger: 'blur'}
           ]
         }
       }
@@ -88,37 +71,34 @@
       ...mapActions(['userLogin']),
       // 向登录接口发起请求
       login(){
-        let user = this.formLogin;
-        let formData = {
-          name: user.name,
-          password: md5(user.password)
-        };
         // 表单验证
         this.$refs['formLogin'].validate((valid) => {
           if (valid) {
-            let res = userLogin(formData)
-            // 通过验证之后才请求登录接口
-            if (res.data.success) {
-              this.userLogin(res.data)
-              this.$message.success(`${res.data.message}`)
-              // 登录成功 跳转至首页
-              // this.$router.push({name:'Home'}) 
-              this.$router.push('/')
-            }else{
-              this.$message.error(`${res.data.message}`)
-              return false;
-            }
+            this.checkLogin();
           } else {
             this.$message.error('表单验证失败!')
             return false;
           }
         });
       },
-      // 表单重置
-      resetForm(){
-        console.log('session')
-        this.$refs['formLogin'].resetFields();
-      }
+      async checkLogin () {
+        let user = this.formLogin;
+        let formData = {
+          username: user.name,
+          password: md5(user.password)
+        };
+        let res = await getLogin(formData)
+        // 通过验证之后才请求登录接口
+        if (res.state.code === 200) {
+          this.userLogin(res.data)
+          this.$message.success(`${res.state.msg}`)
+          // 登录成功 跳转至首页
+          this.$router.push('/home')
+        }else{
+          this.$message.error(`${res.state.msg}`)
+          return false;
+        }
+      },
     }
   }
 </script>

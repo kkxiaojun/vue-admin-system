@@ -2,10 +2,14 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>home</h2>
+    <el-row>
+      <el-button type="primary" @click="logOut">注销</el-button>
+    </el-row>
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import { detail } from '@/service/getData'
 export default {
   name: 'home',
@@ -18,9 +22,14 @@ export default {
     this.initData()
   },
   methods: {
+    ...mapActions(['userLoginOut']),
     initData () {
       console.log('detail')
       // detail()
+    },
+    logOut () {
+      this.userLoginOut();
+      this.$router.push({name: 'login'})
     }
   }
 }

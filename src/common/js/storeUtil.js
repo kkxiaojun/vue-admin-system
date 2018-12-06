@@ -1,3 +1,7 @@
+const COMMON_PARAMS = {
+    REMEMBERDAY: 1,
+}
+
 /**
  * set the localStorage
  * @param {String} name 
@@ -27,8 +31,9 @@ export const removeStore = (name) => {
     window.localStorage.removeItem(name)
 }
 export const setCookie = (name, value) => {
+    // 24 * 60 * 60 * 1000
     var exp = new Date();
-    exp.setTime(exp.getTime() + cookieObj.rememberDays * 24 * 60 * 60 * 1000);
+    exp.setTime(exp.getTime() + COMMON_PARAMS.REMEMBERDAY * 24 * 60 * 60 * 1000);
     document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString() + ";path=/";
 }
 export const getCookie = (name) => {
@@ -43,7 +48,7 @@ export const getCookie = (name) => {
 export const removeCookie = (name) => {
     var exp = new Date();
     exp.setTime(exp.getTime() - 1);
-    var cval = cookieObj.getCookie(name);
+    var cval = getCookie(name);
     if (cval != null) {
         document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString() + ";path=/";
     }
