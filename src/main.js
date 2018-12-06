@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import '@/common/less/index.less'
+import 'common/js/filters'
 
 // 使用element-ui
 import Element from 'element-ui'

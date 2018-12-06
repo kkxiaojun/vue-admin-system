@@ -18,14 +18,10 @@
           <el-form-item>
               <el-button type="primary" @click="login">登录</el-button>
           </el-form-item>
-          <el-form-item>
-            <router-link to="/register">
-              <el-button type="">没有账号，立即注册<i class="el-icon-arrow-right el-icon--right"></i></el-button>
-            </router-link>
-          </el-form-item>
         </el-form>
       </el-col>
     </el-row>
+    <div>{{filterText | filterHtml}}</div>
   </el-card>
 </template>
 
@@ -53,6 +49,7 @@
          }
       }
       return{
+        filterText: '<span>filters</span>',
         formLogin:{
           name: '',
           password: ''
