@@ -4,9 +4,9 @@
   "description": "A Vue.js project",
   "author": "zhaoguojun <zhaoguojun@gosuncn.com>",
   "private": true,
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/kkxiaojun/vue-admin-system.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kkxiaojun/vue-admin-system.git"
   },
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -15,8 +15,11 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "element-ui": "^2.4.11",
+    "js-md5": "^0.7.3",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

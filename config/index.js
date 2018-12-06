@@ -10,7 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: { 
+      '/pmc/service': {
+        target: 'http://172.16.10.22:90',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/pmc/service': '/service'   //重写接口
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

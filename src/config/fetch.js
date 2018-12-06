@@ -23,6 +23,7 @@ export default async (url = '', data = {}, type = 'GET', method = 'fetch') => {
 			credentials: 'include',
 			method: type,
 			headers: {
+				'Access-Control-Allow-origin' : '*',
 				'Accept': 'application/json',
 				'Content-Type': 'application/json'
 			},

@@ -39,7 +39,8 @@ module.exports = {
       'common': resolve('src/common'),
       'components': resolve('src/components'),
       'images': resolve('src/images'),
-      'pages': resolve('src/pages')
+      'views': resolve('src/views'),
+      'service': resolve('src/service')
     }
   },
   module: {

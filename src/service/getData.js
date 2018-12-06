@@ -1,5 +1,6 @@
 import fetch from '@/config/fetch'
 
-export const detail = () => fetch('url', {
-  type: 'url'
-})
+export const detail = (username, password) => fetch('/pmc/service/login', {
+  account: username,
+  password: password
+}, 'post')
