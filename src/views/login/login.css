@@ -92,33 +92,28 @@
   width: 119px;
   height: 119px;
   margin-left: 60px;
-  background: url(../../images/home/password.png) no-repeat;
 }
 .login-wrap .login-container .content .body .login-type-select .password {
   cursor: pointer;
   width: 119px;
   height: 119px;
   margin-left: 60px;
-  background: url(../../images/home/password_hover.png) no-repeat;
 }
 .login-wrap .login-container .content .body .login-type-select .face-active {
   cursor: pointer;
   width: 119px;
   height: 119px;
-  background: url(../../images/home/face.png) no-repeat;
 }
 .login-wrap .login-container .content .body .login-type-select .face {
   cursor: pointer;
   width: 119px;
   height: 119px;
-  background: url(../../images/home/face_hover.png) no-repeat;
 }
 .login-wrap .login-container .content .body .login-type-select .defi-active {
   cursor: pointer;
   width: 119px;
   height: 119px;
   margin-left: 50px;
-  background: url(../../images/home/defi.png) no-repeat;
 }
 .login-wrap .login-container .content .body .login-type-select .defi {
   cursor: pointer;
@@ -283,11 +278,7 @@
 .login-wrap .login-container .content .body .form .login-type .face .face-img {
   width: 69px;
   height: 69px;
-  background: url(../../images/login/face_login.png);
-}
-.login-wrap .login-container .content .body .form .login-type .face .face-img:active,
-.login-wrap .login-container .content .body .form .login-type .face .face-img:hover {
-  background: url(../../images/login/face_login_active.png);
+  background: url(../../images/home/defi.png);
 }
 .login-wrap .login-container .content .body .form .login-type .certificate {
   width: 90px;
@@ -299,11 +290,6 @@
   width: 69px;
   height: 69px;
   margin: 0 auto;
-  background: url(../../images/login/certificate_login.png);
-}
-.login-wrap .login-container .content .body .form .login-type .certificate .certificate-img:active,
-.login-wrap .login-container .content .body .form .login-type .certificate .certificate-img:hover {
-  background: url(../../images/login/certificate_login_active.png);
 }
 .login-wrap .login-container .content .body .form .login-type .login-type-name {
   color: #fff;
