@@ -1,7 +1,6 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>home</h2>
+  <div>
+    <router-view></router-view>
     <el-row>
       <el-button type="primary" @click="logOut">注销</el-button>
     </el-row>

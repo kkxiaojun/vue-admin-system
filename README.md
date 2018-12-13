@@ -1,6 +1,6 @@
 # vue-admin-system
 
-> A Vue.js project
+> 基于vue、vue-router、vuex、fetch、cookie和addRoutes的动态菜单路由权限控制
 
 ## Build Setup
 
