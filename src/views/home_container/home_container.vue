@@ -1,6 +1,6 @@
 <template>
-    <div :class="{navCollapsed:isSidebarNavCollapse}">
-        <sidebarNav  class="sidebar"/>
+    <div class="side-container" :class="{navCollapsed:isSidebarNavCollapse}">
+        <sidebarNav class="sidebar"/>
         <mainContent/>
     </div>
 </template>
@@ -24,5 +24,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
+.side-container{
+    height: 100%;
+}
 </style>
