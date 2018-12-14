@@ -9,7 +9,6 @@ export const mutations = {
   // 这里的data指提交时：
   // 从/api/login传回的user对象，其中包含name,messeage等信息
   [types.LOGIN](state, data) {
-    console.log('mutations:', data)
     state.token = data.token;
     // vuex的本质作用是管理组件之间复杂的状态的（如购物车逻辑等等...）
     // 所以当刷新浏览器时，这些状态也会一并被清空

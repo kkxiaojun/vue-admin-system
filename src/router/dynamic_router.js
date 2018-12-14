@@ -1,4 +1,4 @@
-const Side = import('views/side/side')
+const Side = () => import('@/views/side/side')
 
 /* 需要权限判断的路由 */
 const DynamicRouters = [

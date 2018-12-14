@@ -8,7 +8,6 @@
 export function recursionRouter(userRouter = [], allRouter = []) {
     var realRoutes = []
     allRouter.forEach((v, i) => {
-        console.log('userRouter:', userRouter)
         userRouter.forEach((item, index) => {
             if (item.name === v.meta.name) {
                 if (item.children && item.children.length > 0) {

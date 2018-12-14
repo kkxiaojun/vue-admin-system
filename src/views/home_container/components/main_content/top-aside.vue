@@ -26,7 +26,7 @@
             </div>
             <div class="user-msg">
                 <img class="user-img" :src="require('@/assets/image/a.png')" alt="">
-                <span class="user-name">Lily-叶</span>
+                <span class="user-name">zhaozhao</span>
                 <el-dropdown trigger="click" placement="top">
                     <span class="el-dropdown-link">
                         <i class="el-icon-arrow-down el-icon--right"></i>

@@ -8,7 +8,8 @@ import modules from './modules'
 Vue.use(Vuex);
 
 const state = {
-    token: ''
+    token: '',
+    isSidebarNavCollapse: false
 }
 
 export default new Vuex.Store({

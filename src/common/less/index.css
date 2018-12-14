@@ -1,3 +1,4 @@
+@import url('//at.alicdn.com/t/font_641452_q3ah7ae4qvndn29.css');
 html {
   width: 100%;
   height: 100%;
@@ -11,6 +12,9 @@ body {
   line-height: 1.42857143;
   color: #545454;
   overflow-x: auto;
+}
+#app {
+  height: 100%;
 }
 .clearfix:after {
   content: " ";
@@ -156,4 +160,118 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+/* 侧边栏 */
+.sidebar {
+  width: 200px !important;
+  height: 100%;
+  background: #304156;
+  transition: all 0.25s;
+  position: fixed !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  overflow-x: hidden;
+  /* 菜单hover时的背景 */
+  /* 菜单active时的背景 */
+  /* .el-menu-item.is-active {
+        background: #293748 !important;
+    } */
+}
+.sidebar .iconfont {
+  margin-right: 8px;
+  color: #fff;
+  font-size: 18px;
+}
+.sidebar > div.menu-container > li.el-menu-item,
+.sidebar > div.menu-container > li.el-submenu > .el-submenu__title {
+  border-bottom: 1px solid rgba(238, 238, 238, 0.1);
+}
+.sidebar .el-menu-item {
+  background: #304156 !important;
+}
+.sidebar .el-submenu__title:hover,
+.sidebar .el-menu-item:hover {
+  background: #223041 !important;
+}
+/* 主体内容 */
+.main-container {
+  min-height: 100%;
+  margin-left: 200px;
+  transition: margin-left 0.25s;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 50px;
+}
+/* 折叠菜单下的样式 */
+.navCollapsed .sidebar {
+  width: 64px !important;
+}
+.navCollapsed .sidebar ul {
+  display: none;
+}
+.navCollapsed .sidebar .iconfont + span {
+  display: none;
+}
+.navCollapsed .sidebar .el-submenu__icon-arrow {
+  display: none;
+}
+.navCollapsed .main-container {
+  margin-left: 64px;
+}
+.navCollapsed .aside__top {
+  left: 64px!important;
+}
+.el-menu {
+  border: none;
+}
+.el-menu .iconfont {
+  color: #fff;
+  font-size: 16px;
+}
+.el-menu .el-submenu__title:hover {
+  background: none !important;
+}
+.el-menu .el-submenu__title i.el-submenu__icon-arrow {
+  color: #ddd;
+  font-size: 15px;
+}
+.el-menu .el-menu-item-group__title {
+  padding: 0;
+}
+.el-breadcrumb {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  margin-left: 5px;
+}
+.el-breadcrumb .el-breadcrumb__inner.is-link {
+  display: inline-block;
+  font-weight: normal;
+  color: #424040 !important;
+}
+.el-breadcrumb .is-last-link .is-link {
+  font-weight: normal;
+  color: #999 !important;
+}
+.sidebar-container {
+  transition: width .28s;
+  width: 180px ;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+  background: rgba(0, 0, 0, 0.5);
+}
+.sidebar-container.navCollapsed {
+  width: 63px ;
+}
+.navCollapsed .el-submenu > .el-submenu__title > span {
+  display: none;
+}
+.navCollapsed .el-submenu > .el-submenu__title .el-submenu__icon-arrow {
+  display: none;
 }

@@ -1,9 +1,7 @@
 <template>
   <div>
     <router-view></router-view>
-    <el-row>
-      <el-button type="primary" @click="logOut">注销</el-button>
-    </el-row>
+    hhh
   </div>
 </template>
 
@@ -23,12 +21,6 @@ export default {
   methods: {
     ...mapActions(['userLoginOut']),
     initData () {
-      console.log('detail')
-      // detail()
-    },
-    logOut () {
-      this.userLoginOut();
-      this.$router.push({name: 'login'})
     }
   }
 }

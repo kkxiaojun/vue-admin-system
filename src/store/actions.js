@@ -12,7 +12,6 @@ const actions = {
   userLogin({
     commit
   }, data) {
-    console.log('userLogin:', data)
     commit(types.LOGIN, data);
   },
   userLoginOut({

@@ -30,7 +30,6 @@ const mutations = {
 const actions = {
     async FETCH_PERMISSION({ commit, state }) {
         let permissionList = await getPermission()
-        console.log('permissionList:', permissionList)
         /*  根据权限筛选出我们设置好的路由并加入到path=''的children */
         let routes = recursionRouter(permissionList.data || [], dynamicRouter)
         let MainContainer = DynamicRoutes.find(v => v.path === '')
@@ -56,7 +55,6 @@ const actions = {
 
         /*  动态添加路由 */
         router.addRoutes(DynamicRoutes)
-
         /* 完整的路由表 */
         commit('SET_PERMISSION', [...initialRoutes, ...DynamicRoutes])
     }

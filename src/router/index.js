@@ -40,6 +40,7 @@ export const DynamicRoutes = [
         name: 'home',
         component: Home,
         meta: {
+          requiresAuth: true,
           name: '首页',
           icon: 'icon-home'
         }

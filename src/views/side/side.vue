@@ -1,6 +1,6 @@
 <template>
     <div class="side">
-        side demo
+        sdfsdfsf
     </div>
 </template>
 <script>
