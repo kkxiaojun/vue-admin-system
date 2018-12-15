@@ -13,12 +13,16 @@ import 'element-ui/lib/theme-chalk/index.css'
 // vuex
 import store from './store/index.js'
 
+import { getCookie } from '@/common/js/storeUtil'
+
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
 
 router.beforeEach((to, from, next) => {
-    if (!store.state.token) {
+    console.log('token:', store.state.token)
+    console.log('cookies:', getCookie('token'))
+    if (!store.state.token && !getCookie('token')) {
         if (
             to.matched.length > 0 &&
             !to.matched.some(record => record.meta.requiresAuth)

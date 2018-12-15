@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 
 export default {
     data() {
@@ -55,11 +55,12 @@ export default {
         ...mapState(['isSidebarNavCollapse', 'crumbList'])
     },
     methods: {
+        ...mapMutations(['LOGINOUT']),
         toggleNavCollapse() {
             this.$store.commit('toggleNavCollapse')
         },
         loginOut() {
-            this.$store.commit('LOGIN_OUT')
+            this.LOGINOUT()
             /* 防止切换角色时addRoutes重复添加路由导致出现警告 */
             window.location.reload()
         }
