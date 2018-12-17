@@ -22,10 +22,10 @@ export const mutations = {
     state.token = '';
     removeCookie('token');
   },
-  toggleNavCollapse(state) {
+  [types.TOGGLE_NAV](state) {
     state.isSidebarNavCollapse = !state.isSidebarNavCollapse
   },
-  setCrumbList(state, list) {
+  [types.SET_CRUMB_LIST](state, list) {
       state.crumbList = list
   }
 }

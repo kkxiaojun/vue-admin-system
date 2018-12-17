@@ -19,9 +19,8 @@ Vue.config.productionTip = false
 
 Vue.use(ElementUI)
 
+// 路由前置守卫
 router.beforeEach((to, from, next) => {
-    console.log('token:', store.state.token)
-    console.log('cookies:', getCookie('token'))
     if (!store.state.token && !getCookie('token')) {
         if (
             to.matched.length > 0 &&
@@ -46,9 +45,10 @@ router.beforeEach((to, from, next) => {
     }
 })
 
+// router 后置守卫,实现面包屑导航
 router.afterEach((to, from, next) => {
     var routerList = to.matched
-    store.commit('setCrumbList', routerList)
+    store.commit('SET_CRUMB_LIST', routerList)
     store.commit('permission/SET_CURRENT_MENU', to.name)
 })
 

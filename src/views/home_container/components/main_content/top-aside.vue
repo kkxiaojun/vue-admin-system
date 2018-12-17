@@ -55,9 +55,9 @@ export default {
         ...mapState(['isSidebarNavCollapse', 'crumbList'])
     },
     methods: {
-        ...mapMutations(['LOGINOUT']),
+        ...mapMutations(['LOGINOUT', 'TOGGLE_NAV']),
         toggleNavCollapse() {
-            this.$store.commit('toggleNavCollapse')
+            this.TOGGLE_NAV()
         },
         loginOut() {
             this.LOGINOUT()

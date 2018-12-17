@@ -10,6 +10,16 @@ const DynamicRouters = [
             name: '订单管理',
             icon: 'icon-email'
         },
+        children: [
+            {
+                name: 'order',
+                path: '/sidelist',
+                component: Side,
+                meta: {
+                    name: '订单列表'
+                }
+            }
+        ]
     },
 ]
 
