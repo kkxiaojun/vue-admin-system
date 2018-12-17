@@ -1,7 +1,7 @@
 import router, { DynamicRoutes } from '@/router/index'
 import dynamicRouter from '@/router/dynamic_router'
 import { recursionRouter, setDefaultRoute} from 'common/js/routerUtil'
-import { getPermission } from '@/service/getData'
+import authService from '@/service/authService'
 
 const state = {
     permissionList: null /** 所有路由 */,
@@ -29,7 +29,7 @@ const mutations = {
 
 const actions = {
     async FETCH_PERMISSION({ commit, state }) {
-        let permissionList = await getPermission()
+        let permissionList = await authService.getPermission()
         /*  根据权限筛选出我们设置好的路由并加入到path=''的children */
         let routes = recursionRouter(permissionList.data || [], dynamicRouter)
         let MainContainer = DynamicRoutes.find(v => v.path === '')
