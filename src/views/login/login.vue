@@ -27,7 +27,7 @@
 // 引入vuex /src/helper.js中的辅助函数，
 // 将actions中的方法直接转为组件中的方法
 import { mapActions } from "vuex";
-import { getLogin, getPerssion } from "service/getData";
+import authService from "@/service/authService";
 import md5 from "js-md5";
 export default {
   data() {
@@ -77,7 +77,7 @@ export default {
         username: user.name,
         password: md5(user.password)
       };
-      let res = await getLogin(formData)
+      let res = await authService.getLogin(formData)
       if (res.code === 200) {
         this.userLogin(res.data);
         this.$message.success(`${res.message}`);
