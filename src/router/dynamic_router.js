@@ -1,11 +1,10 @@
 const Side = () => import('@/views/side/side')
+const User = () => import('@/views/user/user')
 
 /* 需要权限判断的路由 */
 const DynamicRouters = [
     {
-        path: '/side',
-        component: Side,
-        name: 'side',
+        path: '/orderManage',
         meta: {
             name: '订单管理',
             icon: 'icon-email'
@@ -13,7 +12,7 @@ const DynamicRouters = [
         children: [
             {
                 name: 'order',
-                path: '/sidelist',
+                path: '/order',
                 component: Side,
                 meta: {
                     name: '订单列表'
@@ -21,6 +20,23 @@ const DynamicRouters = [
             }
         ]
     },
+    {
+        path: '/system',
+        meta: {
+            name: '系统管理',
+            icon: 'icon-user'
+        },
+        children: [
+            {
+                name: 'system',
+                path: '/system',
+                component: User,
+                meta: {
+                    name: '用户管理'
+                }
+            }
+        ]
+    }
 ]
 
 export default DynamicRouters

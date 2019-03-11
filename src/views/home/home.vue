@@ -7,7 +7,7 @@
 
 <script>
 import { mapActions } from 'vuex'
-import { detail } from '@/service/getData'
+import { detail } from '@/service/authService'
 export default {
   name: 'home',
   data () {

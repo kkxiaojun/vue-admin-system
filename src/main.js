@@ -3,8 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import '@/common/less/index.less'
-import 'common/js/filters'
+import '@/assets/less/index.less'
+import '@/filters/filters'
 
 // 使用element-ui
 import ElementUI from 'element-ui'
@@ -13,7 +13,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 // vuex
 import store from './store/index.js'
 
-import { getCookie } from '@/common/js/storeUtil'
+import { getCookie } from '@/utils/storeUtil'
 
 Vue.config.productionTip = false
 

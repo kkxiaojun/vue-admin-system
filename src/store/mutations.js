@@ -1,5 +1,5 @@
 import * as types from './mutation-types'
-import { setCookie, removeCookie } from 'common/js/storeUtil'
+import { setCookie, removeCookie } from '@/utils/storeUtil'
 
 // 对于vuex的用法，其实理解了流程就行
 // vuex -> actions -> 提交（commit）mutations ->state -> view -> dispatch 触发 actions ->...

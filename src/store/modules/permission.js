@@ -1,6 +1,6 @@
 import router, { DynamicRoutes } from '@/router/index'
 import dynamicRouter from '@/router/dynamic_router'
-import { recursionRouter, setDefaultRoute} from 'common/js/routerUtil'
+import { recursionRouter, setDefaultRoute} from '@/utils/routerUtil'
 import authService from '@/service/authService'
 
 const state = {

@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import { getCookie } from 'common/js/storeUtil'
 const Home = () => import('views/home/home')
 const Login = () => import('views/login/login')
 const HomeContainer = () => import('views/home_container/home_container')

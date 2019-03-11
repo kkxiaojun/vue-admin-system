@@ -11,11 +11,11 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: { 
-      '/pmc/service': {
-        target: 'http://172.16.10.22:90',
+      '/amt/service': {
+        target: 'http://172.16.11.190:90',
         changeOrigin: true,
         pathRewrite: {
-          '^/pmc/service': '/service'   //重写接口
+          '^/amt/service': '/service'   //重写接口
         }
       }
     },

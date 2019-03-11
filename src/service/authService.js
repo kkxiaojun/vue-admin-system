@@ -1,4 +1,4 @@
-import fetch from './http/fetch'
+import fetch from './xhr/fetch'
 
 /**
  * 用户认证所用到的 API
